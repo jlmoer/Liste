@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 
 export default function CountryCard(props) {
     return (
@@ -6,7 +6,10 @@ export default function CountryCard(props) {
             <Text style={{ fontWeight: 'bold' }}>
                 {props.country.name.common}
             </Text>
-            <Text>{props.country.capital[0]}</Text>
+            <Text>{props.country.capital
+                ? props.country.capital[0]
+                : "No Capital"}
+            </Text>
         </View>
     );
 }

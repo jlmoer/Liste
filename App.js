@@ -19,8 +19,8 @@ export default function App() {
     data={countries}
     renderItem={(data) => <CountryCard country={data.item} />}
     keyExtractor={(data, index) => index.toString()}
-    ListHeaderComponent={() => <Text>Welcome</Text>}
-    ListFooterComponent={() => <Text>Thank you for using the app</Text>}
+    ListHeaderComponent={() => <Text style={{ textAlign: 'center' }}>Welcome</Text>}
+    ListFooterComponent={() => <Text style={{ textAlign: 'center' }}>Thank you for using the app</Text>}
     ItemSeparatorComponent={() => (
       <View style={{ borderBottomWidth: 1 }}></View>
     )}
